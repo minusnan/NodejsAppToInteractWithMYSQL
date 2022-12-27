@@ -1,0 +1,503 @@
+<html>>
+	<head>
+		<title>GameInformer</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+ <meta charset="UTF-8">
+	</head>
+	<style>
+	.btn-link {
+
+background: none;
+border: none;
+padding: 0px;
+color: #cccccc;
+font: inherit;
+
+}
+
+.btn-link:hover {
+
+color: #aa2b33;
+text-decoration: blink;
+}
+
+	h1 {
+  color: #cccccc;
+  font-family: "Nunito", sans-serif;
+  font-size: 45;
+  padding-top: 5px;
+  
+}
+h3{
+	/*border:3px #aa2b33  double;*/
+	color: #aa2b33;
+  font-family: "Nunito", sans-serif;
+}
+ .cards {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ flex: 1 1 100%;
+ align-items: stretch;
+ margin: 50px 100px;
+ justify-content: center safe;
+ }
+ .card {
+ flex-direction: column;
+ flex-wrap: nowrap;
+ flex: 1 1 40%;
+ margin: 10px;
+ max-width: 60%;
+ background-color: #24141c;
+ align items:stretch;
+ justify-content: right;
+ border-radius: 10px ;
+ box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+ } 
+.cards img {
+ max-width: 40%;
+ border-radius: 30px;
+ padding: 10px;
+ 
+ }
+ .card .text {
+ font-family: "Nunito", sans-serif;
+ padding: 0 20px 20px;
+ color: #cccccc;
+ }
+.h3_index{
+	text-align: center;
+  position: absolute;
+  left: 36%;
+  font-size:30;
+  margin-top:0%;
+  border:3px #aa2b33  double;
+	color: #aa2b33;
+  font-family: "Nunito", sans-serif;
+}
+header{
+	text-align: center;
+	background-color: #24141c;
+	color: #cccccc;
+	font-family: "Nunito", sans-serif;
+	font-size: 20;
+	width: 100%;
+	height: 20%;
+	border-radius: 7px;
+    right: 0;
+    left: 0;
+    margin: auto;
+	
+}
+main{
+	width: 80%;
+    height: 30%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+body {
+  background-color: #aa2b33;
+}
+
+.container {
+  background-color: #24141c;
+  color: #cccccc;
+  font-family: "Nunito", sans-serif;
+  font-size: 20;
+  width: 100%;
+  height: 241px;
+  border-radius: 7px;
+  /*padding: 5%;
+  margin: 5% auto;*/
+}
+.bez_tochek{
+  list-style-type: none;
+}
+.bez_otst{
+	padding-left: 0;
+}
+
+button {
+	outline: none;
+	border: none;
+	background: #aa2b33;
+	color: #ffffff;
+	width: 170px;
+	height: 50px;
+	border-radius: 5px;
+	font-family: "Nunito", sans-serif;
+	cursor: pointer;
+	font-size: 20;
+    }
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+
+  &2 {
+    border-right: 0.1px solid rgba(178, 170, 171, 0.185);
+  }
+
+    h2 {
+      font-weight: 600;
+    }
+
+    h4 {
+      font-weight: 400;
+    }
+
+    span {
+      font-weight: 200;
+    }
+
+    h4 {
+      margin: 0;
+    }
+
+    ul {
+      padding-inline-start: 7%;
+      margin: 20% 0;
+
+      li {
+        font-weight: 200;
+      }
+	}
+}
+
+
+
+header ul {
+  list-style: none; /*убираем маркеры списка*/
+  margin: 0; /*убираем отступы*/
+  padding-left: 5; /*убираем отступы*/
+  margin-bottom: 50px;
+  margin-left: 39%;
+}
+main a, header a {
+	background: #aa2b33;
+	color: #ffffff;
+  font-family: "Nunito", sans-serif;
+  text-decoration: none; /*убираем подчеркивание текста ссылок*/
+  padding:10px; /*добавляем отступ*/
+  border-radius:5px; /*добавляем скругление*/
+  -moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
+  -o-transition: all 0.3s 0.01s ease;
+  -webkit-transition: all 0.3s 0.01s ease;
+}
+header a:hover {
+  background:#1C85BB;/*добавляем эффект при наведении*/
+}
+header li {
+  float:left; /*Размещаем список горизонтально для реализации меню*/
+  margin-right:5px; /*Добавляем отступ у пунктов меню*/
+  
+}
+
+#zatemnenie {
+        background: rgba(102, 102, 102, 0.5);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+		overflow: hidden;
+      }
+#okno {
+        width: 350px;
+        height: 500px;
+        text-align: center;
+        padding: 15px;
+        border: 3px solid #ab343a;
+        border-radius: 10px;
+        color: #24141c;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background: #fff;
+      }
+#zatemnenie:target {display: block;}
+      .close {
+        display: inline-block;
+        border: 1px solid #0000cc;
+        color: #0000cc;
+        padding: 0 12px;
+        margin: 10px;
+        text-decoration: none;
+        background: #f2f2f2;
+        font-size: 14pt;
+        cursor:pointer;
+      }
+.close:hover {background: #e6e6ff;}
+
+#zatemnenie1 {
+        background: rgba(102, 102, 102, 0.5);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+		overflow: none;
+      }
+#okno1 {
+        width: 350px;
+        height: 500px;
+        text-align: center;
+        padding: 15px;
+        border: 3px solid #ab343a;
+        border-radius: 10px;
+        color: #24141c;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background: #fff;
+      }
+#zatemnenie1:target {display: block;}
+      .close1 {
+        display: inline-block;
+        border: 1px solid #0000cc;
+        color: #0000cc;
+        padding: 0 12px;
+        margin: 10px;
+        text-decoration: none;
+        background: #f2f2f2;
+        font-size: 14pt;
+        cursor:pointer;
+      }
+.close1:hover {background: #e6e6ff;}
+
+
+* {box-sizing: border-box;}
+main form {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+}
+main input, main form button {
+  border: none;
+  outline: none;
+  border-radius: 7px;
+}
+main input {
+	color: #24141c;
+  width: 100%;
+  height: 42px;
+  background: #cccccc;
+  padding-left: 15px;
+}
+main form button {
+		color: #24141c;
+  height: 26px;
+  width: 26px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #ab343a;
+  cursor: pointer;
+}
+main form button:before {
+  content: "\f105";
+  font-family: "Nunito", sans-serif;
+  color: #F9F0DA;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.add{
+color: #24141c;
+  width: 100%;
+  height: 42px;
+  background: #fff;
+  padding-left: 15px;
+}
+
+.vspiv, h3 p{
+	top: 0;
+    right: 0;
+    bottom: 0;
+	left: 0;
+	margin: auto;
+	margin-bottom: 3px;
+	margin-top: -23px;
+	text-align: center;
+	font-family: "Nunito", sans-serif;
+	color: #24141c;
+}
+
+#ss {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.game_page{
+	background: #24141c;
+	margin-top: 1%;
+	border-radius: 7px;
+	color: #cccccc;
+	font-family: "Nunito", sans-serif;
+	height: 68%;
+}
+
+.butt_game{
+	margin-top: 1%;
+	background: #24141c;
+	width: 10%;
+	margin-left: 45%;
+}
+
+/*.body_game{
+	text-align: center;
+}*/
+
+.game_title{
+	position: absolute;	
+	margin-left: 5%;
+	font-size: 50;
+	
+}
+
+.game_list{
+	position: absolute;
+	margin-top: 7%;
+	margin-left: 7%;
+	font-size: 40;
+}
+
+
+
+.price_game{
+	padding-left: 10px;
+	border:3px #aa2b33  double;
+}
+
+.krest{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	cursor:pointer;
+}
+
+#zatemnenie .krest{
+	margin-top: -11px;
+	margin-left: 245px;
+}
+
+	</style>
+	
+	<body>
+	
+
+		<header>
+		
+			<h1>GameInformer</h1>
+			<nav>
+			
+			<ul>
+				<li><a href="#zatemnenie">Add the game</a></li>
+				<li><a href="#zatemnenie1">Build your price</a></li>
+			</ul>
+
+			</nav>
+		</header>
+
+		<main>
+			
+			<br>
+<div class="dsp container">
+<div class="row dsp">
+<h2>Search:</h2>
+<form id="searchForm" action="/search" method="post">
+  <input placeholder="search game" type="text" name='add'>
+  <br><br>
+
+</form>
+</div>
+</div>
+
+<main class="cards">
+<% for(var i=0; i < data.length; i++) { %>
+ <article class="card">
+ <div class="text">
+ <h3><%= data[i].id %></h3>
+ <p><form class="text" method="post", action="/see">
+<input class="btn-link" name=game value = "<%= data[i].name %>" type="submit"><br>
+</form>
+ <p><%= data[i].publisher %><br>
+ <p><%= data[i].developer %><br>
+ <p><%= data[i].released %><br>
+ <p><%= data[i].rating %><br>
+ </div>
+ </article>
+ <img src="data:image/png;base64,<%= data[i].cover.toString('base64'); %>" style="" />
+<% } %>
+
+</main>
+	
+		<div id="zatemnenie">
+      		<div id="okno">
+				<h3 class='krest' onclick="window.location.href = '#';">&#10006;</h3>
+        		<form name="gam" action="/addgame" enctype="multipart/form-data" method="POST" >
+
+ <label for="game_name">Game name:</label>
+ <input type="text" id="gamename" name="gamename" placeholder="Enter game name"
+required/>
+
+ <br>
+ <label for="publisher">Publisher:</label>
+ <input type="text" id="pub" name="pub" placeholder="Enter publisher" />
+ <br>
+ <label for="developer">Developer:</label>
+ <input type="text" id="dev" name="dev" placeholder="Enter dev"
+required/>
+ <br>
+ <label for="releasedate">Release date:</label>
+ <input type="text" id="rel" name="rel" placeholder="Enter release date"
+required/>
+ <br>
+ <label for="rate">Rating:</label>
+ <input type="text" id="rate" name="rate" placeholder="Enter rating" />
+ <br>
+ <label for="file">Choose cover</label>
+ <br>
+ <input type="file" class="custom-file-input" name="cover" accept="images/*"
+onchange="preview_image(event)" />
+<br>
+<br>
+ <input type="submit" value="Add" "/>
+ </form>
+      		</div>
+    	</div>
+
+		<div id="zatemnenie1" onclick="window.location.href = '#';">
+      		<div id="okno1">
+        		<form action="" method="get">
+
+				</form>
+      		</div>
+    	</div>
+	
+	</body>
+<script>
+function preview_image(event){
+var reader = new FileReader();
+reader.onload = function() {
+ var output = document.getElementById('output_image');
+ output.src = reader.result; }
+reader.readAsDataURL(event.target.files[0]);
+}
+</script>
+</html>

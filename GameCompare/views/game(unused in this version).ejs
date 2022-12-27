@@ -1,0 +1,134 @@
+<html>
+
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="slideshow.css">
+		<title>[eq1</title>
+		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/css/bootstrap-select.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.7.5/js/bootstrap-select.min.js"></script>
+	</head>
+	
+	<body class='body_game'>
+	
+	
+		<header>
+			<h1>GameInformer</h1>
+			
+			<nav>
+			
+				<ul>
+					<li><a href="#zatemnenie">Add the game</a></li>
+					<li><a href="#zatemnenie1">Build your price</a></li>
+				</ul>
+
+			</nav>
+		</header>
+		
+		<button class='butt_game' onclick="window.location.href = 'index.html';">Back</button>
+					
+		<main class='game_page'>
+			
+			<h2 class='game_title'>Game's name</h2>
+			
+			<ul class='game_list'>
+				<li>dev</li>
+				<li>pub</li>
+				<li>pub</li>
+			</ul>
+			
+			<div style='position: relative;top: 20%; margin-left: 44%;'>
+			<div class="slideshow-container">
+			
+				<div class="mySlides fade">
+					<img src="is1.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides fade">
+					<img src="is2.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides fade">					
+					<img src="is3.jpg" style="width:100%">
+				</div>
+			  
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			<br>
+			<div style="text-align:center; margin-left: -10%;">
+				<span class="dot" onclick="currentSlide(1)"></span>
+				<span class="dot" onclick="currentSlide(2)"></span>
+				<span class="dot" onclick="currentSlide(3)"></span>
+			</div>
+			</div>
+			
+			<h3 class='price_game' style='margin-top: -50px;'>OLD PRICE: <p style='	color: #cccccc; font-family: "Nunito", sans-serif; margin-left:-75%;'>10$</p></h3>
+			<h3 class='price_game'>NEW PRICE: <p style='	color: #cccccc; font-family: "Nunito", sans-serif; margin-left:-75%;'>60$</p></h3>
+			
+			<a href="#" style='top: 100; margin-left: 10px;'>Delete the game?</a><
+			
+		</main>
+		
+		<div id="zatemnenie">
+      		<div id="okno">
+				<h3 class='krest' onclick="window.location.href = '#';">&#10006;</h3>
+        		<form action="" method="get">
+					<p class='vspiv'>Enter your game!</p>
+					<input placeholder="Game name" type="text" class='add'>
+					<input placeholder="dev" type="text" class='add'>
+					<input placeholder="Pub" type="text" class='add'>
+					<input placeholder="Release date" type="text" class='add'>
+					<input placeholder="rate" type="text" class='add'>
+					<br><br>
+					<button onclick="window.location.href = '#';" type="submit">Send</button>
+				</form>
+      		</div>
+    	</div>
+		
+		<div id="zatemnenie1"">
+      		<div id="okno1">
+				<h3 class='krest' onclick="window.location.href = '#';">&#10006;</h3>
+        		<form action="" method="get">
+
+						<select class="selectpicker" data-style="btn-info" multiple data-max-options="3" data-live-search="true">
+							<optgroup label="Web">
+								<option>PHP</option>
+								<option>CSS</option>
+								<option>HTML</option>
+								<option>CSS 3</option>
+								<option>Bootstrap</option>
+								<option>JavaScript</option>
+							</optgroup>
+						</select>
+					 
+				</form>
+      		</div>
+    	</div>
+
+	<script>
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			for (i = 0; i < slides.length; i++) {
+			   slides[i].style.display = "none";  
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {slideIndex = 1}    
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+			setTimeout(showSlides, 2000); // Change image every 2 seconds
+		}
+	</script>	
+	</body>
+	
+</html>
